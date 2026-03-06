@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vinho: #660000;
+  --color-vinho-dim: #4d0000;
+  --color-offwhite: #F5F5F1;
+  --color-softblack: #2D2D2D;
+  --color-paper: #eaeae4;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", "Lato", sans-serif;
+
+  --shadow-luxury: 0 4px 20px -5px rgba(0, 0, 0, 0.1);
+  --shadow-deep: 0 10px 40px -10px rgba(102, 0, 0, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-offwhite text-softblack font-sans antialiased;
+    background-image: radial-gradient(circle at 50% 50%, #ffffff 0%, #F5F5F1 100%);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-luxury {
+    @apply bg-gradient-to-r from-vinho to-vinho-dim text-white font-bold px-8 py-4 rounded-md shadow-luxury hover:scale-105 hover:shadow-deep transition-all duration-300 text-center uppercase tracking-widest text-sm;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-24;
+  }
+
+  .paper-texture {
+    background-color: #f5f5f1;
+    background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  }
+}
