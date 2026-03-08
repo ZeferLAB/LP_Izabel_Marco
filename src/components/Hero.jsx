@@ -48,33 +48,27 @@ export default function Hero() {
                         Pare de performar um personagem que te esgota. Vamos desconstruir a <span className="font-bold">&quot;síndrome da impostora&quot;</span> e estruturar a base prática para você ser <span className="font-bold">ouvida e respeitada</span> pela sua <span className="font-bold">real competência</span>.
                     </p>
 
-                    <div className="flex flex-col w-full items-center lg:items-start mt-4 lg:mt-0">
-                        {/* No Desktop exibe os detalhes adicionais - Oculto no Mobile para economizar espaço Above the Fold */}
-                        <div className="hidden lg:block mb-6 w-full">
-                            <Countdown />
-                        </div>
+                    <div className="flex flex-col w-full items-center lg:items-start mt-4 lg:mt-8">
+                        <a href="#offer" className="bg-[#660000] text-white w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] font-bold text-center shadow-xl hover:shadow-2xl transition-all uppercase tracking-widest sm:rounded-sm">
+                            QUERO GARANTIR MINHA VAGA NA IMERSÃO
+                        </a>
 
-                        <div className="flex flex-col w-full items-center lg:items-start">
-                            <a href="#offer" className="bg-[#660000] text-white w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] font-bold text-center shadow-xl hover:shadow-2xl transition-all uppercase tracking-widest sm:rounded-sm">
-                                SIM, EU QUERO SER OUVIDA
-                            </a>
-
-                            <div className="hidden lg:flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-[10px] text-softblack/50 font-medium uppercase tracking-widest mt-4">
-                                <span className="flex items-center gap-1.5">
-                                    <Monitor size={12} className="text-vinho/60" /> Ao vivo no Zoom
-                                </span>
-                                <span className="flex items-center gap-1.5">
-                                    <CheckCircle2 size={12} className="text-vinho/60" /> Vagas Limitadas
-                                </span>
-                                <span className="flex items-center gap-1.5">
-                                    <Calendar size={12} className="text-vinho/60" /> 4 de Abril
-                                </span>
-                            </div>
+                        <div className="hidden lg:flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-[10px] text-softblack/50 font-medium uppercase tracking-widest mt-4">
+                            <span className="flex items-center gap-1.5">
+                                <Monitor size={12} className="text-vinho/60" /> Ao vivo no Zoom
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                                <CheckCircle2 size={12} className="text-vinho/60" /> Vagas Limitadas
+                            </span>
+                            <span className="flex items-center gap-1.5">
+                                <Calendar size={12} className="text-vinho/60" /> 4 de Abril
+                            </span>
                         </div>
                     </div>
-                </motion.div>
-
             </div>
-        </section>
+        </motion.div>
+
+            </div >
+        </section >
     );
 }
