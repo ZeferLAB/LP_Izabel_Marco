@@ -26,7 +26,7 @@ function App() {
             O Despertar da Mulher Exausta
           </p>
           <p className="text-softblack/40 text-xs tracking-widest uppercase">
-            © 2026 Izabel Comunicatória. Todos os direitos reservados.
+            © 2026 Ludimila Izabel. Todos os direitos reservados.
           </p>
         </div>
       </footer>

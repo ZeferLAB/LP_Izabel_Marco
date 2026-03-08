@@ -64,7 +64,7 @@ export default function Hero() {
                                     <CheckCircle2 size={12} className="text-vinho/60" /> Vagas Limitadas
                                 </span>
                                 <span className="flex items-center gap-1.5">
-                                    <Calendar size={12} className="text-vinho/60" /> 4 e 5 de Abril
+                                    <Calendar size={12} className="text-vinho/60" /> 4 de Abril
                                 </span>
                             </div>
                         </div>
