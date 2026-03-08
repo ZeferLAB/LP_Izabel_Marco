@@ -49,7 +49,7 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col w-full items-center lg:items-start mt-4 lg:mt-8">
-                        <a href="#offer" className="bg-[#660000] text-white w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] font-bold text-center shadow-xl hover:shadow-2xl transition-all uppercase tracking-widest sm:rounded-sm">
+                        <a href="#offer" className="btn-hero-cta w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] text-center uppercase tracking-widest block">
                             QUERO GARANTIR MINHA VAGA NA IMERSÃO
                         </a>
 
@@ -65,10 +65,9 @@ export default function Hero() {
                             </span>
                         </div>
                     </div>
-            </div>
-        </motion.div>
+                </motion.div>
 
-            </div >
-        </section >
+            </div>
+        </section>
     );
 }

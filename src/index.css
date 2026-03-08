@@ -6,7 +6,7 @@
   --color-offwhite: #F5F5F1;
   --color-softblack: #2D2D2D;
   --color-paper: #eaeae4;
-  
+
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", "Lato", sans-serif;
 
@@ -18,13 +18,16 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-offwhite text-softblack font-sans antialiased;
     background-image: radial-gradient(circle at 50% 50%, #ffffff 0%, #F5F5F1 100%);
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply font-serif;
   }
 }
@@ -41,5 +44,60 @@
   .paper-texture {
     background-color: #f5f5f1;
     background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+  }
+
+  .btn-hero-cta {
+    @apply relative overflow-hidden bg-vinho text-offwhite font-sans font-bold rounded-md shadow-sm transition-all duration-300 ease-in-out;
+  }
+
+  .btn-hero-cta:hover {
+    @apply lg:scale-[1.03] lg:shadow-md;
+  }
+
+  .btn-hero-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
+    transform: skewX(-20deg);
+    animation: shimmer-effect 4s infinite;
+  }
+
+  @media (max-width: 1023px) {
+    .btn-hero-cta {
+      animation: soft-pulse 3s infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes shimmer-effect {
+  0% {
+    left: -100%;
+  }
+
+  20% {
+    left: 200%;
+  }
+
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes soft-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
   }
 }
