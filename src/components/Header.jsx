@@ -8,7 +8,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-[10px] lg:text-xs tracking-[0.15em] font-sans uppercase font-medium">
                     <div className="flex items-center gap-2">
                         <Star size={12} className="text-white/80" />
-                        <span>Imersão O Resgate da Sua Voz | 1ª Edição Histórica</span>
+                        <span>Imersão O Resgate da Voz | 1ª EDIÇÃO HISTÓRICA</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <Calendar size={12} className="text-white/80" />

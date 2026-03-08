@@ -4,8 +4,8 @@ import { Countdown } from './Scarcity';
 
 export default function Hero() {
     return (
-        <section className="relative min-h-[calc(100vh-40px)] flex items-center bg-gradient-to-br from-[#F5F5F1] via-[#ffffff] to-[#eaeae4] overflow-hidden pt-4 pb-12">
-            <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <section className="relative min-h-[calc(100vh-40px)] flex flex-col justify-center bg-gradient-to-br from-[#F5F5F1] via-[#ffffff] to-[#eaeae4] overflow-hidden pt-[56px] lg:pt-24 pb-12">
+            <div className="section-container !py-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
 
                 {/* Coluna de Imagem: Aparece PRIMEIRO no mobile (order-1), SEGUNDO no desktop (lg:order-2) */}
                 <motion.div
@@ -13,22 +13,22 @@ export default function Hero() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className="relative order-1 lg:order-2 flex justify-center items-center py-4 lg:py-0"
+                    className="relative order-1 lg:order-2 flex justify-center items-center w-full"
                 >
                     {/* Brilho/Glow de Luxo atrás da foto */}
                     <div className="absolute inset-0 bg-gradient-radial from-vinho/10 via-transparent to-transparent opacity-60 scale-150 blur-3xl -z-10" />
                     <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-white/40 blur-[80px] -z-10" />
 
-                    <div className="relative aspect-[3/4] w-full max-w-[260px] lg:max-w-sm mx-auto group">
-                        <div className="absolute inset-0 bg-gray-200 border border-gray-100 shadow-luxury rounded-sm overflow-hidden z-10 transition-transform duration-700 group-hover:scale-[1.02]">
-                            {/* Futura foto da especialista */}
+                    <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full lg:max-w-sm mx-auto group">
+                        <div className="absolute inset-0 bg-gray-200 border border-gray-100 shadow-luxury overflow-hidden z-10 transition-transform duration-700 group-hover:scale-[1.02] sm:rounded-sm">
+                            {/* Futura foto da especialista (cortada do peito para cima no mobile, 100% largura) */}
                             <div className="w-full h-full bg-[#f8f8f8] flex items-center justify-center text-softblack/10 font-serif text-xl italic uppercase tracking-tighter">
                                 Izabel
                             </div>
                         </div>
-                        {/* Moldura elegante flutuante */}
-                        <div className="absolute -inset-2 border border-vinho/5 rounded-sm -z-0" />
-                        <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-vinho/5 rounded-full blur-2xl" />
+                        {/* Moldura elegante flutuante - Oculta no mobile para layout full width */}
+                        <div className="hidden sm:block absolute -inset-2 border border-vinho/5 rounded-sm -z-0" />
+                        <div className="hidden sm:block absolute -bottom-4 -right-4 w-24 h-24 bg-vinho/5 rounded-full blur-2xl" />
                     </div>
                 </motion.div>
 
@@ -38,25 +38,28 @@ export default function Hero() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
+                    className="flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1 mt-4 lg:mt-0 px-2 lg:px-0"
                 >
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl text-softblack leading-[1.15] font-serif">
-                        Construa o seu <span className="text-vinho italic">posicionamento de autoridade</span> e resgate a sua voz de liderança em apenas <span className="text-vinho italic">1 dia de Imersão</span>.
+                    <h1 className="text-[28px] sm:text-4xl lg:text-5xl xl:text-5xl text-softblack leading-[1.1] lg:leading-[1.15] font-serif lg:mb-6">
+                        Construa o seu <span className="text-vinho italic">posicionamento de autoridade</span> e resgate a sua voz em <span className="text-vinho italic">1 dia de Imersão</span>.
                     </h1>
 
-                    <p className="text-sm lg:text-base text-softblack/80 max-w-lg leading-relaxed font-sans">
-                        Pare de performar um personagem que te esgota. Durante o nosso encontro ao vivo, vamos desconstruir a <span className="font-bold">&quot;síndrome da impostora&quot;</span>, alinhar a sua <span className="font-bold">comunicação à sua identidade</span> e estruturar a base prática para você ser <span className="font-bold">ouvida e respeitada</span> pela sua <span className="font-bold">real competência</span>.
+                    <p className="text-[16px] lg:text-lg text-softblack/80 max-w-lg leading-[1.2] lg:leading-relaxed font-sans mt-4 lg:mt-0 lg:mb-8">
+                        Pare de performar um personagem que te esgota. Vamos desconstruir a <span className="font-bold">&quot;síndrome da impostora&quot;</span> e estruturar a base prática para você ser <span className="font-bold">ouvida e respeitada</span> pela sua <span className="font-bold">real competência</span>.
                     </p>
 
-                    <div className="flex flex-col space-y-8 w-full items-center lg:items-start">
-                        <Countdown />
+                    <div className="flex flex-col w-full items-center lg:items-start mt-4 lg:mt-0">
+                        {/* No Desktop exibe os detalhes adicionais - Oculto no Mobile para economizar espaço Above the Fold */}
+                        <div className="hidden lg:block mb-6 w-full">
+                            <Countdown />
+                        </div>
 
-                        <div className="flex flex-col space-y-4 w-full items-center lg:items-start">
-                            <a href="#offer" className="btn-luxury w-full sm:w-max py-4 text-base shadow-xl hover:shadow-2xl transition-all">
-                                QUERO GARANTIR MEU INGRESSO (R$ 47,00)
+                        <div className="flex flex-col w-full items-center lg:items-start">
+                            <a href="#offer" className="bg-[#660000] text-white w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] font-bold text-center shadow-xl hover:shadow-2xl transition-all uppercase tracking-widest sm:rounded-sm">
+                                SIM, EU QUERO SER OUVIDA
                             </a>
 
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-[10px] text-softblack/50 font-medium uppercase tracking-widest">
+                            <div className="hidden lg:flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 text-[10px] text-softblack/50 font-medium uppercase tracking-widest mt-4">
                                 <span className="flex items-center gap-1.5">
                                     <Monitor size={12} className="text-vinho/60" /> Ao vivo no Zoom
                                 </span>
