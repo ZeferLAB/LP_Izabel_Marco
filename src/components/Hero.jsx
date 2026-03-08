@@ -40,13 +40,12 @@ export default function Hero() {
                     viewport={{ once: true }}
                     className="flex flex-col space-y-6 text-center lg:text-left items-center lg:items-start order-2 lg:order-1"
                 >
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl text-vinho leading-[1.15] font-serif">
-                        Você não vai sair daqui sabendo falar melhor. <br />
-                        <span className="italic font-serif">Você vai sair daqui incapaz de continuar se diminuindo.</span>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl text-softblack leading-[1.15] font-serif">
+                        Construa o seu <span className="text-vinho italic">posicionamento de autoridade</span> e resgate a sua voz de liderança em apenas <span className="text-vinho italic">1 dia de Imersão</span>.
                     </h1>
 
-                    <p className="text-sm lg:text-base text-softblack/80 max-w-lg leading-relaxed">
-                        Em 2 dias de Imersão, entenda por que você se tornou uma mulher exausta, recupere a sua voz interna e aprenda a sustentar publicamente a autoridade que você já possui.
+                    <p className="text-sm lg:text-base text-softblack/80 max-w-lg leading-relaxed font-sans">
+                        Pare de performar um personagem que te esgota. Durante o nosso encontro ao vivo, vamos desconstruir a <span className="font-bold">&quot;síndrome da impostora&quot;</span>, alinhar a sua <span className="font-bold">comunicação à sua identidade</span> e estruturar a base prática para você ser <span className="font-bold">ouvida e respeitada</span> pela sua <span className="font-bold">real competência</span>.
                     </p>
 
                     <div className="flex flex-col space-y-8 w-full items-center lg:items-start">
