@@ -3,6 +3,14 @@ import { CheckCircle2, Calendar, Monitor } from 'lucide-react';
 import { Countdown } from './Scarcity';
 
 export default function Hero() {
+    const handleScrollToOffer = (e) => {
+        e.preventDefault();
+        const offerSection = document.getElementById('offer');
+        if (offerSection) {
+            offerSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <section className="relative min-h-[calc(100vh-40px)] flex flex-col justify-center bg-gradient-to-br from-[#F5F5F1] via-[#ffffff] to-[#eaeae4] overflow-hidden pt-[56px] lg:pt-24 pb-12">
             <div className="section-container !py-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
@@ -49,7 +57,11 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col w-full items-center lg:items-start mt-4 lg:mt-8">
-                        <a href="#offer" className="btn-hero-cta w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] text-center uppercase tracking-widest block">
+                        <a
+                            href="#offer"
+                            onClick={handleScrollToOffer}
+                            className="btn-hero-cta w-[90%] lg:w-max py-[16px] px-[24px] text-[18px] text-center uppercase tracking-widest block"
+                        >
                             QUERO GARANTIR MINHA VAGA NA IMERSÃO
                         </a>
 
