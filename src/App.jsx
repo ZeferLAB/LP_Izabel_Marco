@@ -5,6 +5,7 @@ import Mechanism from './components/Mechanism';
 import EventJourney from './components/EventJourney';
 import SpeakerBio from './components/SpeakerBio';
 import Offer from './components/Offer';
+import Guarantee from './components/Guarantee';
 import FAQ from './components/FAQ';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <EventJourney />
       <SpeakerBio />
       <Offer />
+      <Guarantee />
       <FAQ />
 
       {/* Footer Minimalista */}
