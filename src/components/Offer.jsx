@@ -34,10 +34,9 @@ export default function Offer() {
 
                     <a
                         href="#"
-                        className="bg-[#660000] text-[#F5F5F1] hover:bg-[#4d0000] transition-colors duration-300 w-full max-w-md py-6 px-4 md:px-8 text-sm md:text-base font-bold tracking-widest uppercase rounded-sm shadow-xl hover:shadow-2xl hover:scale-[1.02] transform block mx-auto mb-8"
+                        className="btn-hero-cta w-full max-w-md py-[16px] px-[24px] text-[18px] text-center uppercase tracking-widest block mx-auto mb-8"
                     >
-                        SIM, EU NÃO ACEITO MAIS SER INVISÍVEL
-                        <span className="block text-xs mt-1 font-normal opacity-80">(GARANTIR MINHA VAGA)</span>
+                        QUERO COMPRAR O MEU INGRESSO
                     </a>
 
                     <p className="text-[#2D2D2D]/70 text-sm italic font-serif max-w-md mx-auto">
