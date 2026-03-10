@@ -50,10 +50,10 @@ export default function Manifesto() {
                     </blockquote>
 
                     {/* Selo de Cera */}
-                    <div className="w-24 h-24 pt-4">
+                    <div className="w-48 lg:w-64 pt-4">
                         <img
-                            src="/Selo de Cera.jpg"
-                            alt="Selo de Cera"
+                            src="/foto-certificado.png"
+                            alt="Certificado Mulher Exausta"
                             className="w-full h-full object-contain filter drop-shadow-md"
                         />
                     </div>

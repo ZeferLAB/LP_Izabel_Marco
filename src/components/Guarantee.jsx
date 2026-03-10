@@ -5,7 +5,7 @@ export default function Guarantee() {
         <section id="guarantee" className="bg-[#F5F5F1] py-24 px-6 relative overflow-hidden">
             <div className="max-w-3xl mx-auto flex flex-col items-center text-center relative z-10">
 
-                {/* Imagem do Certificado */}
+                {/* Imagem do Selo de Garantia */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -15,9 +15,9 @@ export default function Guarantee() {
                 >
                     <div className="absolute inset-0 bg-[#660000]/10 rounded-full blur-2xl pointer-events-none" />
                     <img
-                        src="/foto-certificado.png"
-                        alt="Certificado Mulher Exausta"
-                        className="w-64 md:w-80 lg:w-96 h-auto relative drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                        src="/selo-garantia.jpg"
+                        alt="Selo de Garantia de 7 Dias"
+                        className="w-48 md:w-56 h-auto relative drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                     />
                 </motion.div>
 
