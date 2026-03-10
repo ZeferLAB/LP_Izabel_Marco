@@ -14,10 +14,14 @@ export default function SpeakerBio() {
                     className="lg:col-span-5 relative"
                 >
                     <div className="aspect-square bg-white p-4 shadow-luxury rounded-sm relative z-10">
-                        <div className="w-full h-full bg-gray-200 overflow-hidden flex items-center justify-center grayscale">
-                            <div className="text-softblack/10 font-serif text-3xl italic">Izabel</div>
+                        <div className="w-full h-full bg-gray-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
+                            <img 
+                                src="/foto-autoridade.jpg" 
+                                alt="Izabel" 
+                                className="w-full h-full object-cover object-top"
+                            />
                             {/* Overlay sutil */}
-                            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/20 to-transparent" />
+                            <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black/50 to-transparent" />
                         </div>
                     </div>
                     {/* Decorative accents */}

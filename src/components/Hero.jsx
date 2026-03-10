@@ -29,10 +29,12 @@ export default function Hero() {
 
                     <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full lg:max-w-sm mx-auto group">
                         <div className="absolute inset-0 bg-gray-200 border border-gray-100 shadow-luxury overflow-hidden z-10 transition-transform duration-700 group-hover:scale-[1.02] sm:rounded-sm">
-                            {/* Futura foto da especialista (cortada do peito para cima no mobile, 100% largura) */}
-                            <div className="w-full h-full bg-[#f8f8f8] flex items-center justify-center text-softblack/10 font-serif text-xl italic uppercase tracking-tighter">
-                                Izabel
-                            </div>
+                            {/* Foto da especialista */}
+                            <img 
+                                src="/foto-principal.jpg" 
+                                alt="Izabel" 
+                                className="w-full h-full object-cover object-top"
+                            />
                         </div>
                         {/* Moldura elegante flutuante - Oculta no mobile para layout full width */}
                         <div className="hidden sm:block absolute -inset-2 border border-vinho/5 rounded-sm -z-0" />
