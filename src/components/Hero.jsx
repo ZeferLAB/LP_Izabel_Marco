@@ -31,7 +31,7 @@ export default function Hero() {
                         <div className="absolute inset-0 bg-gray-200 border border-gray-100 shadow-luxury overflow-hidden z-10 transition-transform duration-700 group-hover:scale-[1.02] sm:rounded-sm">
                             {/* Foto da especialista */}
                             <img 
-                                src="/foto-principal.jpg" 
+                                src="/foto-autoridade.jpg" 
                                 alt="Izabel" 
                                 className="w-full h-full object-cover object-top"
                             />
