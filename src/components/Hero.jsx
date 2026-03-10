@@ -27,7 +27,7 @@ export default function Hero() {
                     <div className="absolute inset-0 bg-gradient-radial from-vinho/10 via-transparent to-transparent opacity-60 scale-150 blur-3xl -z-10" />
                     <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-white/40 blur-[80px] -z-10" />
 
-                    <div className="relative aspect-[4/3] sm:aspect-[3/4] w-full lg:max-w-sm mx-auto group">
+                    <div className="relative aspect-[4/5] sm:aspect-[3/4] w-[85%] sm:w-full lg:max-w-sm mx-auto group">
                         <div className="absolute inset-0 bg-gray-200 border border-gray-100 shadow-luxury overflow-hidden z-10 transition-transform duration-700 group-hover:scale-[1.02] sm:rounded-sm">
                             {/* Foto da especialista */}
                             <img 
