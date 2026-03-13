@@ -17,7 +17,7 @@ export default function EventJourney() {
     ];
 
     return (
-        <section className="bg-white py-24 px-6">
+        <section className="bg-white py-12 lg:py-20 px-6">
             <div className="section-container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

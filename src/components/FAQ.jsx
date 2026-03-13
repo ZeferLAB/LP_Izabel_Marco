@@ -4,32 +4,24 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        q: "Eu sou muito tímida e travo na frente da câmera. Isso serve para mim?",
-        a: "Sim. O Método comunicatória não é sobre 'perder a timidez' ou virar uma pessoa expansiva. É sobre **Comunicatória**: alinhar sua voz interna para que a técnica flua com segurança. Você vai aprender a sustentar sua autoridade mesmo sendo reservada."
+        q: "Para quem é a Imersão?",
+        a: "Para mulheres que já possuem excelência técnica, cargos de liderança ou negócios sólidos no &ldquo;mundo real&rdquo; (offline), mas que se sentem invisíveis ou inseguras na hora de se posicionar no digital, em reuniões ou em vendas. Se você está exausta de &ldquo;performar um personagem&rdquo; e quer que a sua voz acompanhe o peso do seu currículo, esse é o seu lugar."
     },
     {
-        q: "Eu não quero virar 'blogueirinha' nem fazer dancinhas. Vou ter que me expor?",
-        a: "De jeito nenhum. A Izabel combate exatamente a 'performance vazia'. A imersão é para mulheres tecnicamente excelentes que querem ser respeitadas pelo seu valor, não pela sua exposição superficial. Vamos focar em **posicionamento estratégico**, não em entretenimento."
+        q: "A Imersão é mais um curso de oratória?",
+        a: "Definitivamente não. O mercado tenta te ensinar a gesticular e impostar a voz (técnica antes da identidade). Na Imersão, nós vamos aplicar a **Comunicatória**: um destrave cirúrgico para desconstruir a sua síndrome da impostora e alinhar o seu poder interno com a sua postura externa. Você não vai aprender a &ldquo;falar bonito&rdquo;, vai aprender a sustentar a sua autoridade."
     },
     {
-        q: "O meu mercado é muito tradicional e masculino. Esse método funciona?",
-        a: "É exatamente para você. A Izabel foi a primeira estagiária mulher em uma multinacional química machista. Ela criou o CQC no campo de batalha, aprendendo a impor limites e ser ouvida onde o currículo não era suficiente. Você vai aprender a ocupar seu espaço sem pedir desculpas."
+        q: "Como vai funcionar o encontro? É gravado?",
+        a: "A nossa Imersão será **100% ao vivo e interativa via Zoom**. Não é um curso gravado para você largar na gaveta. Será 1 dia inteiro de destrave prático, de mão na massa e de olho no olho comigo. Aviso: O foco é a sua transformação imediata, portanto, priorize estar ao vivo para viver essa experiência."
     },
     {
-        q: "Eu já fiz cursos de oratória e não funcionou. Por que o CQC seria diferente?",
-        a: "Porque o erro dos cursos comuns é ensinar técnica antes de identidade. Eles tentam consertar sua voz sem olhar para quem você é. Na imersão, trabalhamos a **Comunicatória**: primeiro a sua voz interna e o seu código de autoridade, para depois aplicar a oratória."
+        q: "O meu nicho é muito \"sério\" (Direito, Medicina, Corporativo). Isso funciona para mim?",
+        a: "Especialmente para você. A Imersão não foca em te transformar numa &ldquo;blogueirinha&rdquo; de internet. O meu background é a **Indústria Química** (uma multinacional dominada por homens). O que você vai construir aqui é uma postura executiva, firme e inabalável para negociar, liderar e cobrar o seu valor sem precisar pedir desculpas."
     },
     {
-        q: "Eu não tenho tempo. O evento vai ficar gravado?",
-        a: "A gravação será vendida separadamente. O valor de R$ 47 é um filtro para garantir que você esteja **ao vivo** na sala do Zoom. A transformação real acontece na interação e na prática desses dois dias. Se você quer parar de ser invisível, precisa priorizar a sua voz."
-    },
-    {
-        q: "Eu já sou bem-sucedida no offline, mas me sinto invisível no digital. A imersão ajuda?",
-        a: "Esse é o foco principal. Você é o que chamamos de 'Mulher Conquistadora Exausta'. Você tem o faturamento e a competência, mas a sua imagem digital não faz jus ao seu tamanho. Vamos fechar esse abismo entre quem você é e como o mundo te percebe."
-    },
-    {
-        q: "Por que o valor é tão baixo (R$ 47,00)?",
-        a: "Porque é um filtro de compromisso. Este valor afasta as curiosas que só buscam dicas gratuitas e coloca na sala apenas mulheres decididas a parar de se diminuir. É um valor simbólico para garantir que a energia da sala seja de quem quer, de fato, o próximo nível."
+        q: "Por que uma Imersão com você custa apenas R$ 47,00?",
+        a: "Este valor não paga sequer um almoço, e isso é totalmente intencional. O valor de R$ 47,00 atua como um **&ldquo;filtro de comprometimento&rdquo;**. Ele afasta as curiosas que buscam apenas dicas gratuitas e coloca para dentro da nossa sala de Zoom apenas as mulheres que tomaram a decisão real de parar de se diminuir."
     }
 ];
 
@@ -37,7 +29,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState(null);
 
     return (
-        <section className="bg-white py-24 px-6 border-t border-vinho/5">
+        <section className="bg-white py-12 lg:py-20 px-6 border-t border-vinho/5">
             <div className="max-w-2xl mx-auto">
                 <h2 className="text-3xl lg:text-4xl text-softblack font-serif text-center mb-16 italic">
                     Esclarecendo sua Jornada

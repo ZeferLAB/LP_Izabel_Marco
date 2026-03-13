@@ -9,7 +9,7 @@ export default function Mechanism() {
     ];
 
     return (
-        <section className="bg-[#F9F9F8] py-24 px-6 overflow-hidden">
+        <section className="bg-[#F9F9F8] py-12 lg:py-20 px-6 overflow-hidden">
             <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Coluna Esquerda: Texto */}
@@ -73,7 +73,7 @@ export default function Mechanism() {
                             {/* Simulação de tela do iPad */}
                             <div className="w-full h-full bg-[#1a1a1a] rounded-[1.5rem] overflow-hidden relative">
                                 <img
-                                    src="/Caderno Premium.jpg"
+                                    src="/Caderno.png"
                                     alt="Mockup Digital"
                                     className="w-full h-full object-cover opacity-80"
                                 />

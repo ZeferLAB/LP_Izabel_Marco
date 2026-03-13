@@ -12,7 +12,7 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative min-h-[calc(100vh-60px)] flex flex-col justify-center bg-gradient-to-br from-[#F5F5F1] via-[#ffffff] to-[#eaeae4] overflow-hidden pt-[24px] lg:pt-24 pb-8">
+        <section className="relative min-h-[calc(100vh-60px)] flex flex-col justify-center bg-gradient-to-br from-[#F5F5F1] via-[#ffffff] to-[#eaeae4] overflow-hidden pt-[16px] lg:pt-20 pb-6 lg:pb-20">
             <div className="section-container !py-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 items-center">
 
                 {/* Coluna de Imagem: Aparece PRIMEIRO no mobile (order-1), SEGUNDO no desktop (lg:order-2) */}
