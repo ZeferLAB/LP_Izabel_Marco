@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
 
+function handleScrollToOffer(e) {
+    e.preventDefault();
+    const offerSection = document.getElementById('offer');
+    if (offerSection) offerSection.scrollIntoView({ behavior: 'smooth' });
+}
+
 const bullets = [
     {
         main: "engavetou o diploma",
@@ -24,7 +30,7 @@ const bulletPrefixes = [
 export default function Manifesto() {
     return (
         <section className="bg-white py-12 lg:py-20 px-6 relative overflow-hidden">
-            <div className="max-w-3xl mx-auto flex flex-col items-center space-y-12 text-center">
+            <div className="max-w-3xl mx-auto flex flex-col items-center space-y-6 text-center">
 
                 {/* Título */}
                 <motion.h2
@@ -43,14 +49,14 @@ export default function Manifesto() {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="w-full text-left space-y-8"
+                    className="w-full text-left space-y-4"
                 >
                     <p className="text-softblack text-lg lg:text-xl leading-loose">
                         Você estudou, trabalhou e construiu a sua independência. Mas hoje, o seu maior obstáculo não é a falta de currículo ou técnica. Responda com sinceridade se você se transformou em uma destas mulheres:
                     </p>
 
                     {/* Bullet Points */}
-                    <ul className="space-y-5">
+                    <ul className="space-y-4">
                         {bullets.map((item, idx) => (
                             <motion.li
                                 key={idx}
@@ -84,14 +90,14 @@ export default function Manifesto() {
                     </blockquote>
                 </motion.div>
 
-                {/* Selo de Cera */}
-                <div className="w-48 lg:w-64 pt-2">
-                    <img
-                        src="/Selo de Cera.jpg"
-                        alt="Selo de Cera"
-                        className="w-full h-full object-contain filter drop-shadow-md"
-                    />
-                </div>
+                {/* CTA */}
+                <a
+                    href="#offer"
+                    onClick={handleScrollToOffer}
+                    className="btn-hero-cta w-[95%] lg:w-max py-[14px] px-[28px] text-[15px] text-center uppercase tracking-widest block"
+                >
+                    SIM, EU PRECISO RESGATAR A MINHA VOZ
+                </a>
 
             </div>
 
