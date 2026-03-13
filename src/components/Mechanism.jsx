@@ -10,7 +10,7 @@ export default function Mechanism() {
 
     return (
         <section className="bg-[#F9F9F8] py-12 lg:py-20 px-6 overflow-hidden">
-            <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                 {/* Coluna Esquerda: Texto */}
                 <motion.div
@@ -18,13 +18,13 @@ export default function Mechanism() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="space-y-8"
+                    className="space-y-4"
                 >
                     <h2 className="text-3xl lg:text-5xl text-softblack font-serif leading-tight">
                         Esqueça a oratória engessada e o marketing de "blogueirinha".
                     </h2>
 
-                    <div className="space-y-6 text-lg text-softblack/80 leading-relaxed">
+                    <div className="space-y-3 text-lg text-softblack/80 leading-relaxed">
                         <p>
                             O mercado mentiu para você. Disseram que para vender você precisava "performar".
                         </p>

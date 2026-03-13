@@ -83,7 +83,7 @@ export default function Manifesto() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="pt-10"
+                    className="pt-4"
                 >
                     <blockquote className="text-2xl lg:text-3xl text-vinho italic font-serif leading-snug">
                         "Você não está cansada de trabalhar. Você está cansada de performar um personagem e de se diminuir para caber nos lugares."

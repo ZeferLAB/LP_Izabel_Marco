@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function SpeakerBio() {
     return (
         <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-12 lg:py-20 px-6 relative overflow-hidden">
-            <div className="section-container grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <div className="section-container grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
                 {/* Imagem (Esquerda): Placeholder B&W */}
                 <motion.div
@@ -35,7 +35,7 @@ export default function SpeakerBio() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="lg:col-span-7 space-y-8"
+                    className="lg:col-span-7 space-y-4"
                 >
                     <div className="space-y-2">
                         <p className="text-vinho font-bold tracking-widest text-xs uppercase">A Porta-Voz</p>
@@ -44,7 +44,7 @@ export default function SpeakerBio() {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg text-softblack/80 leading-relaxed font-sans">
+                    <div className="space-y-3 text-lg text-softblack/80 leading-relaxed font-sans">
                         <p>
                             Não sou uma teórica. Minha voz foi forjada no campo de batalha.
                         </p>

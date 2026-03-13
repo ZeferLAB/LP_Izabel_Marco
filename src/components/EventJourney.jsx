@@ -24,7 +24,7 @@ export default function EventJourney() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16 space-y-4"
+                    className="text-center mb-8 space-y-3"
                 >
                     <h2 className="text-3xl lg:text-5xl text-softblack font-serif italic">A Jornada da Imersão</h2>
                     <p className="text-softblack/50 text-sm uppercase tracking-widest font-bold">O Rito de Passagem</p>
@@ -38,9 +38,9 @@ export default function EventJourney() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: idx * 0.2 }}
                             viewport={{ once: true }}
-                            className="bg-white p-10 border border-vinho/10 rounded-sm shadow-sm hover:-translate-y-2 hover:shadow-luxury hover:border-vinho/30 transition-all duration-500 group"
+                            className="bg-white p-6 border border-vinho/10 rounded-sm shadow-sm hover:-translate-y-2 hover:shadow-luxury hover:border-vinho/30 transition-all duration-500 group"
                         >
-                            <h3 className="text-xl text-vinho font-serif mb-6 group-hover:italic transition-all">
+                            <h3 className="text-xl text-vinho font-serif mb-3 group-hover:italic transition-all">
                                 {card.title}
                             </h3>
                             <p className="text-softblack/70 leading-relaxed">
