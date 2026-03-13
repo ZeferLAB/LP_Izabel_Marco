@@ -54,7 +54,7 @@ export default function Hero() {
                         Construa o seu <span className="text-vinho italic">posicionamento de autoridade</span> e resgate a sua voz em <span className="text-vinho italic">1 dia de Imersão</span>.
                     </h1>
 
-                    <p className="text-[15px] lg:text-lg text-softblack/80 max-w-lg leading-[1.2] lg:leading-relaxed font-sans mt-3 lg:mt-0 lg:mb-8">
+                    <p className="text-[17px] lg:text-lg text-softblack/80 max-w-lg leading-[1.35] lg:leading-relaxed font-sans mt-3 lg:mt-0 lg:mb-8">
                         Pare de performar um personagem que te esgota. Vamos desconstruir a <span className="font-bold">&quot;síndrome da impostora&quot;</span> e estruturar a base prática para você ser <span className="font-bold">ouvida e respeitada</span> pela sua <span className="font-bold">real competência</span>.
                     </p>
 
