@@ -84,8 +84,9 @@ const LeadForm = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    const actionUrl = import.meta.env.VITE_MAILERLITE_ACTION_URL;
-    const redirectUrl = import.meta.env.VITE_HOTMART_URL;
+    // Fallback URLs based on your .env file
+    const actionUrl = import.meta.env.VITE_MAILERLITE_ACTION_URL || 'https://assets.mailerlite.com/jsonp/2197258/forms/182372481121650401/subscribe';
+    const redirectUrl = import.meta.env.VITE_HOTMART_URL || 'https://pay.hotmart.com/U104935706N?bid=1773692838865';
 
     if (!actionUrl || !redirectUrl) {
       setSubmitError('Configuração inválida. Contate o suporte.');
