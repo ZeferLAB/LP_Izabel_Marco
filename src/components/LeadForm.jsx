@@ -103,7 +103,8 @@ const LeadForm = () => {
         'fields[email]': formData.email.trim(),
         'fields[phone]': formData.phone,
         'ml-submit': '1',
-        'anticsrf': 'true'
+        'anticsrf': 'true',
+        'double_optin': '0'
       })
     })
     .then(() => {
