@@ -29,7 +29,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState(null);
 
     return (
-        <section className="bg-white py-12 lg:py-20 px-6 border-t border-vinho/5">
+        <section className="bg-white py-10 lg:py-14 px-6 border-t border-vinho/5">
             <div className="max-w-2xl mx-auto">
                 <h2 className="text-3xl lg:text-4xl text-softblack font-serif text-center mb-16 italic">
                     Esclarecendo sua Jornada

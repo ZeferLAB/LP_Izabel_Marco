@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Offer({ onOpenModal }) {
     return (
-        <section id="offer" className="bg-[#F5F5F1] py-12 lg:py-20 px-6 relative overflow-hidden flex items-center justify-center">
+        <section id="offer" className="bg-[#F5F5F1] py-10 lg:py-14 px-6 relative overflow-hidden flex items-center justify-center">
             {/* Background Texture continuous */}
             <div className="absolute inset-0 paper-texture opacity-30 pointer-events-none" />
 

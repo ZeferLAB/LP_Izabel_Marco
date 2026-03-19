@@ -9,7 +9,7 @@ export default function Mechanism() {
     ];
 
     return (
-        <section className="bg-[#F9F9F8] py-12 lg:py-20 px-6 overflow-hidden">
+        <section className="bg-[#F9F9F8] py-10 lg:py-14 px-6 overflow-hidden">
             <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                 {/* Coluna Esquerda: Texto */}
