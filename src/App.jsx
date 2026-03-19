@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Manifesto from './components/Manifesto';
@@ -7,8 +8,11 @@ import SpeakerBio from './components/SpeakerBio';
 import Offer from './components/Offer';
 import Guarantee from './components/Guarantee';
 import FAQ from './components/FAQ';
+import LeadFormModal from './components/LeadFormModal';
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen pt-[30px]">
       <Header />
@@ -17,7 +21,7 @@ function App() {
       <Mechanism />
       <EventJourney />
       <SpeakerBio />
-      <Offer />
+      <Offer onOpenModal={() => setIsModalOpen(true)} />
       <Guarantee />
       <FAQ />
 
@@ -32,6 +36,8 @@ function App() {
           </p>
         </div>
       </footer>
+
+      <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
 }

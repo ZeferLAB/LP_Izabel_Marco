@@ -119,8 +119,7 @@ const LeadForm = () => {
   };
 
   return (
-    <section className="section-container relative z-10 w-full flex justify-center py-16">
-      <div className="max-w-[480px] w-full mx-auto p-10 rounded-[20px] bg-white/50 backdrop-blur-md shadow-xl border border-white/40">
+    <div className="w-full">
         <div className="mb-8 text-center">
           <h3 className="text-3xl font-serif text-vinho mb-3">Garanta Seu Lugar</h3>
           <p className="text-softblack/80 font-sans text-sm">
@@ -226,8 +225,7 @@ const LeadForm = () => {
             <span className="text-xs font-medium">Seus dados estão protegidos</span>
           </div>
         </form>
-      </div>
-    </section>
+    </div>
   );
 };
 

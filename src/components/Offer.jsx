@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import LeadForm from './LeadForm';
 
-export default function Offer() {
+export default function Offer({ onOpenModal }) {
     return (
         <section id="offer" className="bg-[#F5F5F1] py-12 lg:py-20 px-6 relative overflow-hidden flex items-center justify-center">
             {/* Background Texture continuous */}
@@ -25,7 +24,7 @@ export default function Offer() {
 
                     <div className="mb-10">
                         <span className="text-7xl md:text-8xl lg:text-[120px] font-serif text-[#660000] leading-none block drop-shadow-sm">
-                            R$ 47,00
+                            R$ 36,90
                         </span>
                     </div>
 
@@ -33,9 +32,12 @@ export default function Offer() {
                         Uma condição única e inaugural para as mulheres que decidiram ser as primeiras a despertar. Este valor é um filtro de comprometimento para garantirmos uma sala apenas com quem está pronta para o próximo nível.
                     </p>
 
-                    <div className="w-full mb-8 relative z-20">
-                        <LeadForm />
-                    </div>
+                    <button
+                        onClick={onOpenModal}
+                        className="btn-hero-cta w-full max-w-md py-[16px] px-[24px] text-[18px] text-center uppercase tracking-widest block mx-auto mb-8 cursor-pointer"
+                    >
+                        Quero Garantir Minha Vaga
+                    </button>
 
                     <p className="text-[#2D2D2D]/70 text-sm italic font-serif max-w-md mx-auto">
                         "Risco Zero: Se ao final da nossa imersão você achar que não valeu a pena, devolvo seu dinheiro na hora."
