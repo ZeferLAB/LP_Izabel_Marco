@@ -99,10 +99,15 @@ const LeadForm = () => {
 
       if (data.success) {
         setTimeout(() => {
+          const rawPhone = formData.phone.replace(/\D/g, '')
+          const phoneac = rawPhone.slice(0, 2)      // DDD — ex: "71"
+          const phonenumber = rawPhone.slice(2)     // número — ex: "996826482"
+
           const params = new URLSearchParams({
             name: formData.name.trim(),
             email: formData.email.trim(),
-            phone: formData.phone.replace(/\D/g, ''),
+            phoneac: phoneac,
+            phonenumber: phonenumber,
             checkoutMode: '2'
           })
           window.location.href = `${import.meta.env.VITE_HOTMART_URL}&${params.toString()}`
