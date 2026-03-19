@@ -76,7 +76,7 @@ const LeadForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validate()) return;
@@ -84,40 +84,30 @@ const LeadForm = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
-    // Fallback URLs based on your .env file
-    const actionUrl = import.meta.env.VITE_MAILERLITE_ACTION_URL || 'https://assets.mailerlite.com/jsonp/2197258/forms/182372481121650401/subscribe';
-    const redirectUrl = import.meta.env.VITE_HOTMART_URL || 'https://pay.hotmart.com/U104935706N?bid=1773692838865';
-
-    if (!actionUrl || !redirectUrl) {
-      setSubmitError('Configuração inválida. Contate o suporte.');
-      setIsSubmitting(false);
-      return;
-    }
-
-    fetch(actionUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        'fields[name]': formData.name.trim(),
-        'fields[email]': formData.email.trim(),
-        'fields[phone]': formData.phone,
-        'ml-submit': '1',
-        'anticsrf': 'true',
-        'double_optin': '0'
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          phone: formData.phone
+        })
       })
-    })
-    .then(() => {
-      // Com no-cors não conseguimos ler a resposta,
-      // então aguardamos 1s e redirecionamos presumindo sucesso
-      setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, 1000);
-    })
-    .catch(() => {
-      setSubmitError('Ocorreu um erro ao enviar. Tente novamente.');
+
+      const data = await response.json()
+
+      if (data.success) {
+        setTimeout(() => {
+          window.location.href = import.meta.env.VITE_HOTMART_URL || 'https://pay.hotmart.com/U104935706N?bid=1773692838865'
+        }, 1000)
+      } else {
+        throw new Error(data.error || 'Erro ao cadastrar')
+      }
+    } catch (error) {
+      setSubmitError(error.message || 'Ocorreu um erro ao enviar. Tente novamente.');
       setIsSubmitting(false);
-    });
+    }
   };
 
   return (
