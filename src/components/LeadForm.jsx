@@ -99,7 +99,13 @@ const LeadForm = () => {
 
       if (data.success) {
         setTimeout(() => {
-          window.location.href = import.meta.env.VITE_HOTMART_URL || 'https://pay.hotmart.com/U104935706N?bid=1773692838865'
+          const params = new URLSearchParams({
+            name: formData.name.trim(),
+            email: formData.email.trim(),
+            phone: formData.phone.replace(/\D/g, ''),
+            checkoutMode: '2'
+          })
+          window.location.href = `${import.meta.env.VITE_HOTMART_URL}&${params.toString()}`
         }, 1000)
       } else {
         throw new Error(data.error || 'Erro ao cadastrar')
