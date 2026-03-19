@@ -30,7 +30,9 @@ export default async function handler(req, res) {
       return res.status(200).json({ received: true })
     }
 
-    // Busca o subscriber no MailerLite pelo email
+    let subscriberId
+
+    // Tenta buscar o subscriber
     const searchRes = await fetch(
       `https://connect.mailerlite.com/api/subscribers/${encodeURIComponent(email)}`,
       {
@@ -41,34 +43,49 @@ export default async function handler(req, res) {
       }
     )
 
-    let subscriberId
-
-    if (!searchRes.ok) {
-      // Subscriber não existe — cria ele antes de adicionar ao grupo
-      console.log(`Subscriber não encontrado, criando: ${email}`)
+    if (searchRes.status === 404) {
+      // Não encontrou — cria o subscriber
+      console.log(`Criando novo subscriber: ${email}`)
       const name = payload?.data?.buyer?.name || ''
       const phone = payload?.data?.buyer?.phone || ''
 
-      const createRes = await fetch('https://connect.mailerlite.com/api/subscribers', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${process.env.MAILERLITE_API_KEY}`,
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          email,
-          fields: { name, phone },
-          status: 'active'
-        })
-      })
+      const createRes = await fetch(
+        'https://connect.mailerlite.com/api/subscribers',
+        {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${process.env.MAILERLITE_API_KEY}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            email,
+            fields: { name, phone },
+            status: 'active'
+          })
+        }
+      )
+
+      if (!createRes.ok) {
+        const err = await createRes.json()
+        console.error('Erro ao criar subscriber:', err)
+        return res.status(200).json({ received: true })
+      }
 
       const createData = await createRes.json()
       subscriberId = createData.data.id
+      console.log(`Subscriber criado com ID: ${subscriberId}`)
 
-    } else {
+    } else if (searchRes.ok) {
+      // Encontrou
       const subscriberData = await searchRes.json()
       subscriberId = subscriberData.data.id
+      console.log(`Subscriber encontrado com ID: ${subscriberId}`)
+
+    } else {
+      // Outro erro inesperado
+      console.error('Erro inesperado ao buscar subscriber:', searchRes.status)
+      return res.status(200).json({ received: true })
     }
 
     // Adiciona ao grupo correto
