@@ -123,7 +123,7 @@ const LeadForm = () => {
   return (
     <div className="w-full">
         <div className="mb-8 text-center">
-          <h3 className="text-3xl font-serif text-vinho mb-3">Garanta Seu Lugar</h3>
+          <h3 className="text-3xl font-serif text-vinho mb-3">Digite seus Dados e Crie seu Acesso:</h3>
           <p className="text-softblack/80 font-sans text-sm">
             Preencha seus dados abaixo para acessar o checkout oficial e garantir sua vaga.
           </p>
@@ -217,7 +217,7 @@ const LeadForm = () => {
                   Enviando...
                 </span>
               ) : (
-                'Quero Garantir Minha Vaga'
+                'CONTINUAR MINHA INSCRIÇÃO ->'
               )}
             </button>
           </div>
