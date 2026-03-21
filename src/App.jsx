@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Manifesto from './components/Manifesto';
 import Mechanism from './components/Mechanism';
-import EventJourney from './components/EventJourney';
 import Programacao from './components/Programacao';
 import SpeakerBio from './components/SpeakerBio';
 import Offer from './components/Offer';
@@ -25,7 +24,6 @@ function App() {
       <Hero />
       <Manifesto />
       <Mechanism />
-      <EventJourney />
       <Programacao />
       <SpeakerBio />
       <Offer onOpenModal={() => setIsModalOpen(true)} />
