@@ -42,7 +42,10 @@ export default function ThankYou() {
   };
 
   return (
-    <main className="min-h-screen bg-offwhite py-12 px-6 flex flex-col items-center">
+    <main 
+      className="bg-offwhite pt-12 px-6 flex flex-col items-center" 
+      style={{ paddingBottom: '40px' }}
+    >
       <div className="max-w-[680px] w-full mx-auto space-y-12">
         
         {/* 1. HEADER DE CONFIRMAÇÃO */}
@@ -75,7 +78,7 @@ export default function ThankYou() {
             variants={fadeInPrefix}
             className="text-lg md:text-xl text-softblack/80 font-medium"
           >
-            Imersão Comunicatória — 11 de Abril às 9h da manhã
+            Imersão: O Resgate da Voz — 11 de Abril às 9h da manhã
           </motion.p>
 
           <motion.div variants={fadeInPrefix} className="pt-6">
@@ -179,7 +182,13 @@ export default function ThankYou() {
               marginHeight="0" 
               marginWidth="0" 
               title="Pesquisa de onboarding" 
-              style={{ minHeight: '600px' }}
+              scrolling="no"
+              style={{ 
+                width: '100%', 
+                minHeight: '900px',
+                border: 'none',
+                display: 'block'
+              }}
             ></iframe>
           </div>
         </motion.section>
@@ -190,17 +199,9 @@ export default function ThankYou() {
           animate="visible"
           variants={fadeInPrefix}
           transition={{ delay: 1.2 }}
-          className="pt-12 pb-6 text-center text-sm font-medium text-softblack/50"
+          className="pt-12 text-center text-sm font-medium text-softblack/50"
         >
-          Dúvidas? Entre em contato pelo Instagram{' '}
-          <a 
-            href="https://instagram.com/izabelfontenelle" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-vinho hover:underline"
-          >
-            @izabelfontenelle
-          </a>
+          Dúvidas? Entre em contato pelo Instagram
         </motion.footer>
 
       </div>
