@@ -103,7 +103,7 @@ export default function ThankYou() {
             </p>
             <div className="pt-2 space-y-3">
               <a 
-                href="https://chat.whatsapp.com/DOUNYiAuDXUCYvPqHssT0E" 
+                href="https://chat.whatsapp.com/Bm4PsMMLEul0cUgrvBoWQA?mode=gi_t" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex w-full md:w-auto justify-center items-center bg-green-600 hover:bg-green-500 text-white font-bold text-base md:text-lg px-6 py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 transform border border-green-500/30"
@@ -203,15 +203,7 @@ export default function ThankYou() {
           transition={{ delay: 1.2 }}
           className="pt-6 text-center text-sm font-medium text-softblack/50"
         >
-          Dúvidas? Entre em contato pelo Instagram{' '}
-          <a 
-            href="https://instagram.com/izabelfontenelle" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-vinho hover:underline"
-          >
-            @izabelfontenelle
-          </a>
+          Dúvidas? Entre em contato pelo Instagram.
         </motion.footer>
 
       </div>
