@@ -9,7 +9,7 @@ export default function Mechanism() {
     ];
 
     return (
-        <section className="bg-[#F9F9F8] py-12 lg:py-20 px-6 overflow-hidden">
+        <section className="bg-[#F9F9F8] py-10 lg:py-12 px-6 overflow-hidden">
             <div className="section-container grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                 {/* Coluna Esquerda: Texto */}
@@ -49,7 +49,7 @@ export default function Mechanism() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="relative flex flex-col items-center space-y-12"
+                    className="relative flex flex-col items-center space-y-8"
                 >
                     {/* Fluxo Minimalista */}
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full justify-center">

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function SpeakerBio() {
     return (
-        <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-12 lg:py-20 px-6 relative overflow-hidden">
+        <section className="bg-gradient-to-r from-gray-50 to-gray-100 py-10 lg:py-12 px-6 relative overflow-hidden">
             <div className="section-container grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
 
                 {/* Imagem (Esquerda): Placeholder B&W */}

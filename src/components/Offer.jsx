@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Offer({ onOpenModal }) {
     return (
-        <section id="offer" className="bg-[#F5F5F1] py-12 lg:py-20 px-6 relative overflow-hidden flex items-center justify-center">
+        <section id="offer" className="bg-[#F5F5F1] py-10 lg:py-12 px-6 relative overflow-hidden flex items-center justify-center">
             {/* Background Texture continuous */}
             <div className="absolute inset-0 paper-texture opacity-30 pointer-events-none" />
 
@@ -28,7 +28,7 @@ export default function Offer({ onOpenModal }) {
                         </span>
                     </div>
 
-                    <p className="text-[#2D2D2D] text-base md:text-lg lg:text-xl max-w-xl mx-auto leading-relaxed font-serif mb-12">
+                    <p className="text-[#2D2D2D] text-base md:text-lg lg:text-xl max-w-xl mx-auto leading-relaxed font-serif mb-6">
                         Uma condição única e inaugural para as mulheres que decidiram ser as primeiras a despertar. Este valor é um filtro de comprometimento para garantirmos uma sala apenas com quem está pronta para o próximo nível.
                     </p>
 
