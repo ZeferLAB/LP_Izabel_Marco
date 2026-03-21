@@ -20,8 +20,8 @@ const faqs = [
         a: "Especialmente para você. A Imersão não foca em te transformar numa &ldquo;blogueirinha&rdquo; de internet. O meu background é a **Indústria Química** (uma multinacional dominada por homens). O que você vai construir aqui é uma postura executiva, firme e inabalável para negociar, liderar e cobrar o seu valor sem precisar pedir desculpas."
     },
     {
-        q: "Por que uma Imersão com você custa apenas R$ 47,00?",
-        a: "Este valor não paga sequer um almoço, e isso é totalmente intencional. O valor de R$ 47,00 atua como um **&ldquo;filtro de comprometimento&rdquo;**. Ele afasta as curiosas que buscam apenas dicas gratuitas e coloca para dentro da nossa sala de Zoom apenas as mulheres que tomaram a decisão real de parar de se diminuir."
+        q: "Por que uma Imersão com você custa apenas R$ 36,90?",
+        a: "Este valor não paga sequer um almoço, e isso é totalmente intencional. O valor de R$ 36,90 atua como um **&ldquo;filtro de comprometimento&rdquo;**. Ele afasta as curiosas que buscam apenas dicas gratuitas e coloca para dentro da nossa sala de Zoom apenas as mulheres que tomaram a decisão real de parar de se diminuir."
     }
 ];
 
