@@ -50,7 +50,7 @@ export default function Programacao() {
             transition={{ duration: 0.6 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl text-vinho font-bold tracking-tight"
           >
-            O seu mapa de destrave: O que vai acontecer no dia 11 de Abril?
+            O que você vai viver no dia 11 de Abril
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Programacao() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-softblack/80 font-medium text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
-            Nós teremos 1 dia inteiro de trabalho intenso, dividido em 4 fases cirúrgicas. Você não vai apenas assistir; você vai desconstruir a sua insegurança e estruturar o seu posicionamento ao vivo.
+            Em 1 dia ao vivo, você vai sair com o seu posicionamento estruturado, a sua voz alinhada e a clareza de como se comunicar sendo exatamente quem você é.
           </motion.p>
         </div>
 
