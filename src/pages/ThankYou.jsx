@@ -82,12 +82,48 @@ export default function ThankYou() {
           </motion.p>
         </motion.section>
 
+        {/* CONTAGEM REGRESSIVA (MOVIDA PARA CIMA E REDUZIDA) */}
+        <motion.section 
+          initial="hidden"
+          animate="visible"
+          variants={fadeInPrefix}
+          transition={{ delay: 0.3 }}
+          className="text-center space-y-2 pt-2"
+        >
+          <p className="text-[11px] font-bold text-softblack/60 uppercase tracking-widest">
+            Faltam para a sua Imersão:
+          </p>
+          {isLive ? (
+            <div className="bg-gradient-to-r from-vinho to-vinho-dim text-white py-3 px-6 rounded-xl font-bold text-base shadow-sm mx-auto inline-block">
+              O evento está acontecendo agora!
+            </div>
+          ) : (
+            <div className="bg-white/50 backdrop-blur border border-vinho/20 py-3 px-4 rounded-xl flex justify-center gap-4 mx-auto inline-flex">
+              {[
+                { label: 'DIAS', value: timeLeft.days },
+                { label: 'HORAS', value: timeLeft.hours },
+                { label: 'MINUTOS', value: timeLeft.minutes },
+                { label: 'SEGUNDOS', value: timeLeft.seconds },
+              ].map((item, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <span className="text-2xl font-serif font-bold text-vinho leading-none">
+                    {String(item.value).padStart(2, '0')}
+                  </span>
+                  <span className="text-[10px] font-bold tracking-wider text-softblack/50 mt-1">
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </motion.section>
+
         {/* 2. CARD DO GRUPO VIP */}
         <motion.section 
           initial="hidden"
           animate="visible"
           variants={fadeInPrefix}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.5 }}
           className="bg-gradient-to-br from-vinho to-vinho-dim rounded-2xl p-6 md:p-8 text-center shadow-deep text-white relative overflow-hidden"
         >
           {/* Subtle gold decoration */}
@@ -117,48 +153,12 @@ export default function ThankYou() {
           </div>
         </motion.section>
 
-        {/* 3. CONTAGEM REGRESSIVA */}
-        <motion.section 
-          initial="hidden"
-          animate="visible"
-          variants={fadeInPrefix}
-          transition={{ delay: 0.6 }}
-          className="text-center space-y-3"
-        >
-          <p className="text-sm md:text-base font-bold text-vinho/70 uppercase tracking-wide">
-            Faltam para a sua Imersão:
-          </p>
-          {isLive ? (
-            <div className="bg-gradient-to-r from-vinho to-vinho-dim text-white py-3 px-6 rounded-lg font-bold text-lg shadow-luxury mx-auto max-w-sm">
-              O evento está acontecendo agora!
-            </div>
-          ) : (
-            <div className="bg-white/80 backdrop-blur border border-vinho/10 p-4 md:p-5 rounded-xl shadow-sm flex justify-center gap-3 md:gap-6 mx-auto max-w-[340px] md:max-w-sm">
-              {[
-                { label: 'DIAS', value: timeLeft.days },
-                { label: 'HORAS', value: timeLeft.hours },
-                { label: 'MINUTOS', value: timeLeft.minutes },
-                { label: 'SEGUNDOS', value: timeLeft.seconds },
-              ].map((item, index) => (
-                <div key={index} className="flex flex-col items-center w-[60px] md:w-16">
-                  <span className="text-3xl md:text-4xl font-serif font-bold text-vinho leading-none">
-                    {String(item.value).padStart(2, '0')}
-                  </span>
-                  <span className="text-[9px] md:text-[10px] font-bold tracking-wider text-softblack/50 mt-1.5">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
-        </motion.section>
-
         {/* 4. DIVISOR E MOTIVADOR */}
         <motion.section 
           initial="hidden"
           animate="visible"
           variants={fadeInPrefix}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.7 }}
           className="bg-[#fcf5f5] border-l-4 border-vinho p-5 md:p-6 rounded-xl shadow-sm mt-8 space-y-3"
         >
           <div className="flex items-center gap-2 text-vinho">
@@ -177,7 +177,7 @@ export default function ThankYou() {
           initial="hidden"
           animate="visible"
           variants={fadeInPrefix}
-          transition={{ delay: 1.0 }}
+          transition={{ delay: 0.9 }}
           className="w-full"
         >
           <div className="bg-white rounded-2xl shadow-luxury overflow-hidden">
@@ -200,7 +200,7 @@ export default function ThankYou() {
           initial="hidden"
           animate="visible"
           variants={fadeInPrefix}
-          transition={{ delay: 1.2 }}
+          transition={{ delay: 1.1 }}
           className="pt-6 text-center text-sm font-medium text-softblack/50"
         >
           Dúvidas? Entre em contato pelo Instagram.
