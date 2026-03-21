@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Guarantee() {
     return (
-        <section id="guarantee" className="bg-[#F5F5F1] py-10 lg:py-12 px-6 relative overflow-hidden">
+        <section id="guarantee" className="bg-[#F5F5F1] py-8 lg:py-10 px-6 relative overflow-hidden">
             <div className="max-w-3xl mx-auto flex flex-col items-center text-center relative z-10">
 
                 {/* Imagem do Selo de Garantia */}

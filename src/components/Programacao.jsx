@@ -38,7 +38,7 @@ const phases = [
 
 export default function Programacao() {
   return (
-    <section className="bg-offwhite py-24 px-6 relative overflow-hidden flex flex-col items-center">
+    <section className="bg-offwhite py-8 lg:py-10 px-6 relative overflow-hidden flex flex-col items-center">
       <div className="max-w-5xl w-full mx-auto relative z-10">
         
         {/* Header da Seção */}
@@ -68,7 +68,7 @@ export default function Programacao() {
           {/* Linha Vertical Central (Desktop) */}
           <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[2px] bg-vinho/10 -translate-x-1/2"></div>
           
-          <div className="space-y-8 md:space-y-0 relative">
+          <div className="space-y-4 md:space-y-0 relative">
             {phases.map((phase, index) => {
               const Icon = phase.icon;
               const isEven = index % 2 !== 0; 
