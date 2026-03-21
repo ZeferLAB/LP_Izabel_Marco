@@ -50,7 +50,7 @@ export default function Programacao() {
             transition={{ duration: 0.6 }}
             className="font-serif text-3xl md:text-4xl lg:text-5xl text-vinho font-bold tracking-tight"
           >
-            O que você vai viver no dia 11 de Abril
+            A Jornada da Imersão: O que você vai viver no dia 11 de Abril
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
