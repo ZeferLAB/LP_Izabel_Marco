@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Manifesto from './components/Manifesto';
 import Mechanism from './components/Mechanism';
 import EventJourney from './components/EventJourney';
+import Programacao from './components/Programacao';
 import SpeakerBio from './components/SpeakerBio';
 import Offer from './components/Offer';
 import Guarantee from './components/Guarantee';
@@ -25,6 +26,7 @@ function App() {
       <Manifesto />
       <Mechanism />
       <EventJourney />
+      <Programacao />
       <SpeakerBio />
       <Offer onOpenModal={() => setIsModalOpen(true)} />
       <Guarantee />
