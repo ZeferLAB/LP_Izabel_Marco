@@ -123,6 +123,22 @@ export default function Programacao() {
           </div>
         </div>
 
+        {/* CTA Button */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 md:mt-24 text-center w-full flex justify-center px-4"
+        >
+          <a 
+            href="#offer" 
+            className="btn-hero-cta inline-flex justify-center items-center w-full md:w-auto px-8 md:px-12 py-5 text-base md:text-lg rounded-xl uppercase tracking-wider shadow-luxury"
+          >
+            SIM, QUERO MEU INGRESSO PARA O DIA 11/04
+          </a>
+        </motion.div>
+
       </div>
     </section>
   );
