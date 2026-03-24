@@ -35,7 +35,7 @@ export default function Guarantee() {
 
                     {/* Texto de Apoio */}
                     <p className="text-[#2D2D2D] text-base md:text-lg lg:text-xl font-sans leading-relaxed">
-                        "Eu confio tanto na transformação da Comunicatória que o risco é todo meu. Se você garantir seu ingresso hoje, acessar os bônus imediatos e, em até 7 dias, decidir que a Imersão não é para você, basta me enviar um e-mail. Eu devolvo 100% do seu investimento de R$ 47,00, sem perguntas, sem burocracia e sem ressentimentos. Continuamos amigas e você segue sua jornada. O combinado não sai caro."
+                        "Eu confio tanto na transformação da Comunicatória que o risco é todo meu. Se você garantir seu ingresso hoje, acessar os bônus imediatos e, em até 7 dias, decidir que a Imersão não é para você, basta me enviar um e-mail. Eu devolvo 100% do seu investimento de R$ 36,90, sem perguntas, sem burocracia e sem ressentimentos. Continuamos amigas e você segue sua jornada. O combinado não sai caro."
                     </p>
                 </motion.div>
 

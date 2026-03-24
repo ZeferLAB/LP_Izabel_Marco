@@ -27,7 +27,7 @@ export const Countdown = () => {
     });
 
     return (
-        <div className="flex gap-8 lg:gap-12">
+        <div className="flex gap-6 lg:gap-8">
             {[
                 { label: 'Dias', value: timeLeft.days },
                 { label: 'Horas', value: timeLeft.hours },

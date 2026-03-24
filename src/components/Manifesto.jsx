@@ -29,7 +29,7 @@ const bulletPrefixes = [
 
 export default function Manifesto() {
     return (
-        <section className="bg-white py-12 lg:py-20 px-6 relative overflow-hidden">
+        <section className="bg-white py-8 lg:py-10 px-6 relative overflow-hidden">
             <div className="max-w-3xl mx-auto flex flex-col items-center space-y-6 text-center">
 
                 {/* Título */}

@@ -3,15 +3,20 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Manifesto from './components/Manifesto';
 import Mechanism from './components/Mechanism';
-import EventJourney from './components/EventJourney';
+import Programacao from './components/Programacao';
 import SpeakerBio from './components/SpeakerBio';
 import Offer from './components/Offer';
 import Guarantee from './components/Guarantee';
 import FAQ from './components/FAQ';
 import LeadFormModal from './components/LeadFormModal';
+import ThankYou from './pages/ThankYou';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  if (window.location.pathname === '/obrigado') {
+    return <ThankYou />;
+  }
 
   return (
     <main className="min-h-screen pt-[30px]">
@@ -19,7 +24,7 @@ function App() {
       <Hero />
       <Manifesto />
       <Mechanism />
-      <EventJourney />
+      <Programacao />
       <SpeakerBio />
       <Offer onOpenModal={() => setIsModalOpen(true)} />
       <Guarantee />

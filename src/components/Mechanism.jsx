@@ -49,7 +49,7 @@ export default function Mechanism() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="relative flex flex-col items-center space-y-12"
+                    className="relative flex flex-col items-center space-y-8"
                 >
                     {/* Fluxo Minimalista */}
                     <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full justify-center">

@@ -28,7 +28,7 @@ export default function Offer({ onOpenModal }) {
                         </span>
                     </div>
 
-                    <p className="text-[#2D2D2D] text-base md:text-lg lg:text-xl max-w-xl mx-auto leading-relaxed font-serif mb-12">
+                    <p className="text-[#2D2D2D] text-base md:text-lg lg:text-xl max-w-xl mx-auto leading-relaxed font-serif mb-6">
                         Uma condição única e inaugural para as mulheres que decidiram ser as primeiras a despertar. Este valor é um filtro de comprometimento para garantirmos uma sala apenas com quem está pronta para o próximo nível.
                     </p>
 

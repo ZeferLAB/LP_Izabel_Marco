@@ -12,7 +12,7 @@ export default function Header() {
                     </div>
                     <div className="flex items-center gap-2">
                         <Calendar size={12} className="text-white/80" />
-                        <span>4 de Abril | Ao vivo no Zoom</span>
+                        <span>11 de Abril | Ao vivo no Zoom</span>
                     </div>
                 </div>
             </div>
