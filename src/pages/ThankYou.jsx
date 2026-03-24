@@ -36,6 +36,18 @@ export default function ThankYou() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (window.fbq) {
+      window.fbq('track', 'Purchase', {
+        content_name: 'Imersão O Resgate da Voz',
+        currency: 'BRL',
+        value: 36.90,
+        num_items: 1,
+        content_type: 'product'
+      })
+    }
+  }, [])
+
   const fadeInPrefix = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }

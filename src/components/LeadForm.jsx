@@ -84,6 +84,14 @@ const LeadForm = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
+    if (window.fbq) {
+      window.fbq('track', 'Lead', {
+        content_name: 'Imersão O Resgate da Voz',
+        currency: 'BRL',
+        value: 36.90
+      })
+    }
+
     try {
       const response = await fetch('/api/leads', {
         method: 'POST',
@@ -98,6 +106,14 @@ const LeadForm = () => {
       const data = await response.json()
 
       if (data.success) {
+        if (window.fbq) {
+          window.fbq('track', 'InitiateCheckout', {
+            content_name: 'Imersão O Resgate da Voz',
+            currency: 'BRL',
+            value: 36.90,
+            num_items: 1
+          })
+        }
         setTimeout(() => {
           const rawPhone = formData.phone.replace(/\D/g, '')
           const phoneac = rawPhone.slice(0, 2)      // DDD — ex: "71"
