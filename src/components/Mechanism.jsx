@@ -73,8 +73,11 @@ export default function Mechanism() {
                             {/* Simulação de tela do iPad */}
                             <div className="w-full h-full bg-[#1a1a1a] rounded-[1.5rem] overflow-hidden relative">
                                 <img
-                                    src="/Caderno.png"
+                                    src="/caderno.webp"
                                     alt="Mockup Digital"
+                                    loading="lazy"
+                                    width="700"
+                                    height="467"
                                     className="w-full h-full object-cover opacity-80"
                                 />
                                 <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-vinho/40 to-transparent" />

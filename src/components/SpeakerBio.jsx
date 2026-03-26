@@ -16,8 +16,9 @@ export default function SpeakerBio() {
                     <div className="aspect-square bg-white p-4 shadow-luxury rounded-sm relative z-10">
                         <div className="w-full h-full bg-gray-200 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
                             <img 
-                                src="/foto-principal.jpg" 
+                                src="/foto-principal.webp" 
                                 alt="Izabel" 
+                                loading="lazy"
                                 className="w-full h-full object-cover object-top"
                             />
                             {/* Overlay sutil */}

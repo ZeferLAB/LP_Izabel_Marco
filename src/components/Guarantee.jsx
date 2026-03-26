@@ -15,8 +15,9 @@ export default function Guarantee() {
                 >
                     <div className="absolute inset-0 bg-[#660000]/10 rounded-full blur-2xl pointer-events-none" />
                     <img
-                        src="/selo-garantia.jpg"
+                        src="/selo-garantia.webp"
                         alt="Selo de Garantia de 7 Dias"
+                        loading="lazy"
                         className="w-48 md:w-56 h-auto relative drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                     />
                 </motion.div>
