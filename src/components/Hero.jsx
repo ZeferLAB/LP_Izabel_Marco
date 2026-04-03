@@ -17,10 +17,8 @@ export default function Hero() {
 
                 {/* Coluna de Imagem: Aparece PRIMEIRO no mobile (order-1), SEGUNDO no desktop (lg:order-2) */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 1, y: 0 }}
                     className="relative order-1 lg:order-2 flex justify-center items-center w-full"
                 >
                     {/* Brilho/Glow de Luxo atrás da foto */}
@@ -48,10 +46,8 @@ export default function Hero() {
 
                 {/* Coluna de Texto: Aparece SEGUNDO no mobile (order-2), PRIMEIRO no desktop (lg:order-1) */}
                 <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    viewport={{ once: true }}
+                    animate={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 1, x: 0 }}
                     className="flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1 mt-2 lg:mt-0 px-2 lg:px-0"
                 >
                     <h1 className="text-[26px] sm:text-4xl lg:text-5xl xl:text-5xl text-softblack leading-[1.1] lg:leading-[1.15] font-serif lg:mb-6">

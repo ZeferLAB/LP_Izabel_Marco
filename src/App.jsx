@@ -1,14 +1,16 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Manifesto from './components/Manifesto';
-import Mechanism from './components/Mechanism';
-import Programacao from './components/Programacao';
-import SpeakerBio from './components/SpeakerBio';
-import Offer from './components/Offer';
-import Guarantee from './components/Guarantee';
-import FAQ from './components/FAQ';
-import LeadFormModal from './components/LeadFormModal';
+
+// Lazy loading components below the fold
+const Manifesto = lazy(() => import('./components/Manifesto'));
+const Mechanism = lazy(() => import('./components/Mechanism'));
+const Programacao = lazy(() => import('./components/Programacao'));
+const SpeakerBio = lazy(() => import('./components/SpeakerBio'));
+const Offer = lazy(() => import('./components/Offer'));
+const Guarantee = lazy(() => import('./components/Guarantee'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const LeadFormModal = lazy(() => import('./components/LeadFormModal'));
 import ThankYou from './pages/ThankYou';
 
 function App() {
@@ -22,13 +24,18 @@ function App() {
     <main className="min-h-screen pt-[30px]">
       <Header />
       <Hero />
-      <Manifesto />
-      <Mechanism />
-      <Programacao />
-      <SpeakerBio />
-      <Offer onOpenModal={() => setIsModalOpen(true)} />
-      <Guarantee />
-      <FAQ />
+      
+      <Suspense fallback={<div className="h-20 flex items-center justify-center"><div className="w-6 h-6 border-2 border-vinho/20 border-t-vinho rounded-full animate-spin" /></div>}>
+        <Manifesto />
+        <Mechanism />
+        <Programacao />
+        <SpeakerBio />
+        <Offer onOpenModal={() => setIsModalOpen(true)} />
+        <Guarantee />
+        <FAQ />
+        
+        <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      </Suspense>
 
       {/* Footer Minimalista */}
       <footer className="bg-[#F5F5F1] py-12 px-6 border-t border-vinho/5 text-center">
@@ -41,8 +48,6 @@ function App() {
           </p>
         </div>
       </footer>
-
-      <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
 }
