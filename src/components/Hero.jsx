@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+
 import { CheckCircle2, Calendar, Monitor } from 'lucide-react';
 import { Countdown } from './Scarcity';
 
@@ -16,10 +16,9 @@ export default function Hero() {
             <div className="section-container !py-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 items-center">
 
                 {/* Coluna de Imagem: Aparece PRIMEIRO no mobile (order-1), SEGUNDO no desktop (lg:order-2) */}
-                <motion.div
-                    animate={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 1, y: 0 }}
-                    className="relative order-1 lg:order-2 flex justify-center items-center w-full"
+                <div
+                    className="relative order-1 lg:order-2 flex justify-center items-center w-full animate-fade-in-up"
+                    style={{ animationDelay: '0.1s' }}
                 >
                     {/* Brilho/Glow de Luxo atrás da foto */}
                     <div className="absolute inset-0 bg-gradient-radial from-vinho/10 via-transparent to-transparent opacity-60 scale-150 blur-3xl -z-10" />
@@ -42,13 +41,11 @@ export default function Hero() {
                         <div className="hidden sm:block absolute -inset-2 border border-vinho/5 rounded-sm -z-0" />
                         <div className="hidden sm:block absolute -bottom-4 -right-4 w-24 h-24 bg-vinho/5 rounded-full blur-2xl" />
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Coluna de Texto: Aparece SEGUNDO no mobile (order-2), PRIMEIRO no desktop (lg:order-1) */}
-                <motion.div
-                    animate={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 1, x: 0 }}
-                    className="flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1 mt-2 lg:mt-0 px-2 lg:px-0"
+                <div
+                    className="flex flex-col text-center lg:text-left items-center lg:items-start order-2 lg:order-1 mt-2 lg:mt-0 px-2 lg:px-0 animate-fade-in-right"
                 >
                     <h1 className="text-[26px] sm:text-4xl lg:text-5xl xl:text-5xl text-softblack leading-[1.1] lg:leading-[1.15] font-serif lg:mb-6">
                         Construa o seu <span className="text-vinho italic">posicionamento de autoridade</span> e resgate a sua voz em <span className="text-vinho italic">1 dia de Imersão</span>.
@@ -79,7 +76,7 @@ export default function Hero() {
                             </span>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
             </div>
         </section>
